@@ -17,8 +17,6 @@ public class StateFlying : IState
     }
     public void Update()
     {
-        Debug.Log("Flying");
-        //gObject.GetComponent<CharacterAI>().SwitchState(Istates[0]);
-        switchState(Istates[0]);
+        gObject.transform.position += Vector3.up * 0.05f;
     }
 }

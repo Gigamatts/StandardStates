@@ -3,12 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Searcher;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CharacterAI : MonoBehaviour
 {
 
     private IState[] states = new IState[2];
     private IState currentState;
+
+    private Controls controls;
+    private InputAction flying;
+    private void Awake()
+    {
+        controls = new Controls();
+        flying = controls.Player.Flying;
+
+    }
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +39,10 @@ public class CharacterAI : MonoBehaviour
     void Update()
     {
         currentState.Update();
+        if (flying.WasPressedThisFrame())
+        {
+            SwitchState(states[currentState == states[0] ? 1 : 0]);
+        }
     }
 
     public void SwitchState(IState ie)
