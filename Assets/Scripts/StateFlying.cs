@@ -9,7 +9,7 @@ public class StateFlying : IState
     private IState[] Istates;
     private Action<IState> switchState;
 
-    public StateFlying(GameObject go, IState[] states,Action<IState> act)
+    public StateFlying(GameObject go, IState[] states, Action<IState> act)
     {
         gObject = go;
         Istates = states;
@@ -17,8 +17,7 @@ public class StateFlying : IState
     }
     public void Update()
     {
+        gObject.transform.position += Vector3.up * 0.1f;
         Debug.Log("Flying");
-        //gObject.GetComponent<CharacterAI>().SwitchState(Istates[0]);
-        switchState(Istates[0]);
     }
 }

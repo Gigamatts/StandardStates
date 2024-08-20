@@ -21,6 +21,6 @@ public class StateWalking : IState
 
         Debug.Log("Walking");
         //gObject.GetComponent<CharacterAI>().SwitchState(Istates[1]);
-        switchState(Istates[1]);
+        //switchState(Istates[1]);
     }
 }
