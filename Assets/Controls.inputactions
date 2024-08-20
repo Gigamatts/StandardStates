@@ -1,0 +1,34 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "567204f7-c3ad-4c1e-b7c6-f5aa9a952028",
+            "actions": [
+                {
+                    "name": "Flying",
+                    "type": "Button",
+                    "id": "15f2ec50-70c3-4beb-9bb8-43276dfa633e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b3b5ffb6-f358-443b-bc92-d713574f82b1",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flying",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
