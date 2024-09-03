@@ -8,6 +8,7 @@ public class Grid : MonoBehaviour
     public Vector2 gridWorldSize;
     public float nodeRadius;
     public LayerMask unwalkableMask;
+    public List<Node> path; //list of nodes in path
 
     float nodeDiameter;
     int gridSizeX;
@@ -85,7 +86,6 @@ public class Grid : MonoBehaviour
         return neighbours;
     }
 
-    public List<Node> path;
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y)); //the 2D Y axis is aligned with the 3D Z axis
